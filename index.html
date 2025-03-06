@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-sxnhizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Видео-фон -->
+    <video autoplay muted loop id="background-video">
+        <source src="img/vinland saga _ lobster.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Экран приветствия -->
+    <div id="welcome-screen">
+        <h2>Click to Enter</h2>
+    </div>
+
+    <div class="container" id="main-content" style="display: none;">
+        <img src="./img/aByd16Z_460svvp9-_1_.gif" alt="Avatar" class="avatar">
+        <h1>-sxnhizer</h1>
+        <p>Cybersecurity Worker</p>
+        <p class="views">👁️ <span id="viewCount">0</span> Profile Views</p>
+        <div class="links">
+            <a href="https://t.me/orensey" target="_blank">Telegram</a>
+            <a href="https://www.faceit.com/ru/players/-sxnhizer/stats/cs2" target="_blank">Faceit</a>
+            <a href="https://csstats.gg/player/76561198215825569" target="_blank">CSStats</a>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="audio/vinland saga _ lobster (online-audio-converter.com).mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Ползунок громкости -->
+    <div class="volume-control">
+        <label for="volume-slider" class="volume-icon">🔊</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

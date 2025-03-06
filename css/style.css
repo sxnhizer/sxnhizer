@@ -1,0 +1,152 @@
+/* ===== Видео-фон ===== */
+#background-video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ===== Основные стили ===== */
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    cursor: default;
+}
+
+/* ===== Экран приветствия ===== */
+#welcome-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* После клика экран исчезает */
+#welcome-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Аватарка ===== */
+/* ===== Аватарка (только лицо, закругленная) ===== */
+/* ===== Аватарка (с точным выравниванием) ===== */
+.avatar {
+    width: 170px; /* Размер, чтобы видно было только лицо */
+    height: 170px; /* Делаем квадрат */
+    object-fit: cover; /* Обрезает всё, что выходит за границы */
+    object-position: 60% center; /* Точная настройка сдвига вправо */
+    border-radius: 50%; /* Делаем круглой */
+    margin-bottom: 15px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ===== Текстовые элементы ===== */
+h1 {
+    font-size: 26px;
+    margin: 5px 0;
+}
+
+p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* ===== Кнопки ===== */
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Ползунок громкости ===== */
+.volume-control {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.volume-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#volume-slider {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    height: 6px;
+}
+
+.volume-control:hover {
+    width: 140px;
+}
+
+.volume-control:hover #volume-slider {
+    width: 100px;
+    opacity: 1;
+}
