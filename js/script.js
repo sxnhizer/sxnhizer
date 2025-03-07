@@ -38,3 +38,11 @@ document.addEventListener("mousemove", (e) => {
         trail.remove();
     }, 400);
 });
+// Полное выключение звука
+const muteButton = document.getElementById("mute-button");
+const audio = document.getElementById("bg-music");
+
+muteButton.addEventListener("click", () => {
+    audio.muted = !audio.muted;
+    muteButton.querySelector("img").src = audio.muted ? "img/mute-off.png" : "img/mute-on.png";
+});
