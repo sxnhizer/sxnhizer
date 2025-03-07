@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Видео-фон -->
-    <video autoplay muted loop id="background-video">
+    <video id="background-video" muted loop>
         <source src="img/vinland saga _ lobster.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -19,15 +19,17 @@
     </div>
 
     <div class="container" id="main-content" style="display: none;">
-        <!-- Вертикальная карточка -->
+        <!-- Карточка профиля -->
         <div class="card">
             <img src="./img/aByd16Z_460svvp9-_1_.gif" alt="Avatar" class="avatar">
             <h1>-sxnhizer</h1>
-            <p>Cybersecurity Worker</p>
-            <p class="views">👁️ <span id="viewCount">0</span> Profile Views</p>
+            <p class="cybersecurity">Cybersecurity Worker</p>
+            <p class="typing-text" id="typing-text"></p> <!-- Печатающая строка -->
+
+            <!-- Блок ссылок -->
             <div class="links">
                 <a href="https://t.me/orensey" target="_blank">
-                    <img src="img/tglogo.png" alt="Telegram" class="tg-icon">
+                    <img src="img/telegram-2048x2048.webp" alt="Telegram">
                 </a>
                 <a href="https://www.faceit.com/ru/players/-sxnhizer/stats/cs2" target="_blank">
                     <img src="img/faceitlogo.jpg" alt="Faceit">
@@ -35,6 +37,14 @@
                 <a href="https://csstats.gg/player/76561198215825569" target="_blank">
                     <img src="img/csstatslogo.png" alt="CSStats">
                 </a>
+                <a href="https://github.com/sxnhizer" target="_blank">
+                    <img src="img/ghlogo.png" alt="GitHub">
+                </a>
+            </div>
+
+            <!-- Счетчик просмотров (Теперь строго под карточкой) -->
+            <div class="view-counter">
+                👁️ <span id="viewCount">0</span>
             </div>
         </div>
     </div>
@@ -47,7 +57,7 @@
     <!-- Кнопка полного отключения звука -->
     <div class="mute-control">
         <button id="mute-button">
-            <img src="img/mute-off.png" alt="Mute">
+            <img src="img/mute-on.png" alt="Mute">
         </button>
     </div>
 

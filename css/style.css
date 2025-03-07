@@ -67,22 +67,36 @@ body {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* ===== Текст в карточке ===== */
+/* ===== Ник ===== */
 .card h1 {
     font-size: 24px;
-    margin: 10px 0;
+    margin: 5px 0;
     color: white;
 }
 
-.card p {
-    font-size: 16px;
-    color: #ccc;
+/* ===== Текст Cybersecurity Worker (ближе к нику) ===== */
+.cybersecurity {
+    font-size: 14px;
+    color: #bbb;
+    margin-top: -5px; /* Подтягиваем ближе к нику */
 }
 
-/* ===== Кнопки с логотипами (убран бордер) ===== */
+/* ===== Печатающая строка ===== */
+.typing-text {
+    font-size: 14px;
+    color: #ddd;
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    display: inline-block;
+    padding: 5px;
+}
+
+/* ===== Кнопки с логотипами (одинаковый размер и выравнивание) ===== */
 .links {
     display: flex;
     justify-content: center;
@@ -96,23 +110,17 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: none; /* Убрали фон */
-    border: none; /* Убрали бордер */
+    background: none;
+    border: none;
     box-shadow: none;
     transition: all 0.3s ease-in-out;
 }
 
-/* ===== Увеличенная иконка Telegram ===== */
-.links a .tg-icon {
+.links a img {
     width: 40px;
     height: 40px;
-}
-
-.links a img {
-    width: 30px;
-    height: 30px;
     object-fit: contain;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3)); /* Лёгкая тень */
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
 /* ===== Эффект при наведении ===== */
@@ -120,7 +128,7 @@ body {
     transform: scale(1.1);
 }
 
-/* ===== Кнопка полного выключения звука (Full Mute) ===== */
+/* ===== Кнопка полного выключения звука ===== */
 .mute-control {
     position: absolute;
     top: 20px;
@@ -138,4 +146,55 @@ body {
     height: 30px;
     object-fit: contain;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* ===== Счетчик просмотров (под карточкой, теперь ровно по центру) ===== */
+.view-counter {
+    margin-top: 15px; /* Отступ от карточки */
+    font-size: 14px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== 📱 АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ===== */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 250px; /* Уменьшаем размер карточки */
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card h1 {
+        font-size: 20px;
+    }
+
+    .cybersecurity {
+        font-size: 12px;
+    }
+
+    .links a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .links a img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .mute-control {
+        top: 15px;
+        right: 15px;
+    }
+
+    #mute-button img {
+        width: 25px;
+        height: 25px;
+    }
 }
