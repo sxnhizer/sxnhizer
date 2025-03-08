@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preload" href="css/style.css" as="style">
-        <link rel="preload" href="js/script.js" as="script">
-        <link rel="preload" href="img/vinland saga _ lobster.mp4" as="video" type="video/mp4">
-        <link rel="preload" href="audio/vinland saga _ lobster (online-audio-converter.com).mp3" as="audio" type="audio/mpeg">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-        <title>-sxnhizer</title>
-    </head>
-    
+    <!-- Preload -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    <link rel="preload" href="img/vinland_saga_lobster.mp4" as="video" type="video/mp4">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+
+    <title>-sxnhizer</title>
+</head>
 <body>
     <!-- Видео-фон -->
-    <video id="background-video" muted loop playsinline poster="img/poster.jpg">
+    <video id="background-video" loop playsinline poster="img/poster.jpg">
         <source src="img/vinland saga _ lobster.mp4" type="video/mp4">
     </video>
     
-
     <!-- Экран приветствия -->
     <div id="welcome-screen">
         <h2>Click to Enter</h2>
@@ -49,17 +48,12 @@
                 </a>
             </div>
 
-            <!-- Счетчик просмотров (Теперь строго под карточкой) -->
+            <!-- Счетчик просмотров -->
             <div class="view-counter">
                 👁️ <span id="viewCount">0</span>
             </div>
         </div>
     </div>
-
-    <audio id="bg-music" loop>
-        <source src="audio/vinland saga _ lobster (online-audio-converter.com).mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
 
     <!-- Кнопка полного отключения звука -->
     <div class="mute-control">
@@ -67,7 +61,5 @@
             <img src="img/mute-on.png" alt="Mute">
         </button>
     </div>
-
-    <script src="js/script.js" defer></script>
 </body>
 </html>

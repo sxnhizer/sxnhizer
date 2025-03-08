@@ -12,6 +12,7 @@
 /* ===== Основные стили ===== */
 body {
     color: white;
+    background-color: black;
     font-family: Arial, sans-serif;
     text-align: center;
     display: flex;
