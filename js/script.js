@@ -82,3 +82,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     typeEffect();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplaythrough", () => {
+        console.log("Видео загружено полностью.");
+    });
+
+    video.addEventListener("error", () => {
+        console.error("Ошибка загрузки видео. Проверьте путь к файлу.");
+    });
+
+    // Если видео не загрузилось за 3 секунды, попробуем другой формат
+    setTimeout(() => {
+        if (!video.readyState) {
+            console.warn("Переключение на резервный формат видео.");
+            video.innerHTML = `
+                <source src="img/vinland_saga_lobster.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            `;
+            video.load();
+        }
+    }, 3000);
+});

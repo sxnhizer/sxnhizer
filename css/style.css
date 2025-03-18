@@ -199,3 +199,48 @@ body {
         height: 25px;
     }
 }
+
+
+/* Оптимизация видео для мобильных устройств */
+@media screen and (max-width: 768px) {
+    #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    /* Карточка становится меньше */
+    .card {
+        width: 90%;
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 90px;
+    }
+
+    .links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .links a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mute-control {
+        top: 10px;
+        right: 10px;
+    }
+
+    #mute-button img {
+        width: 20px;
+        height: 20px;
+    }
+}
