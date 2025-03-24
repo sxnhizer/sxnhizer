@@ -96,8 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (video.readyState < 3) {  // readyState < 3 означает, что видео не загрузилось
             console.warn("Переключение на резервный формат видео.");
             video.innerHTML = `
-                <source src="video/vinlandsaga_lobster.webm" type="video/webm">
-                <source src="video/vinlandsaga_lobster.ogg" type="video/ogg">
+                <source src="video/vinlandsaga_lobster.mp4" type="video/mp4">
                 Ваш браузер не поддерживает видео.
             `;
             video.load();  // Перезагружаем видео с новыми источниками
