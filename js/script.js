@@ -81,12 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(typeEffect, 100);
     }
     typeEffect();
-});
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("background-video");
-
+    // Обработка видео
     video.addEventListener("canplaythrough", () => {
         console.log("Видео загружено полностью.");
     });
@@ -97,13 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Если видео не загрузилось за 3 секунды, попробуем другой формат
     setTimeout(() => {
-        if (!video.readyState) {
+        if (video.readyState < 3) {  // readyState < 3 означает, что видео не загрузилось
             console.warn("Переключение на резервный формат видео.");
             video.innerHTML = `
-                <source src="video/vinlandsaga_lobster.mp4" type="video/mp4">
+                <source src="video/vinlandsaga_lobster.webm" type="video/webm">
+                <source src="video/vinlandsaga_lobster.ogg" type="video/ogg">
                 Ваш браузер не поддерживает видео.
             `;
-            video.load();
+            video.load();  // Перезагружаем видео с новыми источниками
         }
     }, 3000);
 });
